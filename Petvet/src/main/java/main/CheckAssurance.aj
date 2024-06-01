@@ -5,7 +5,7 @@ public aspect CheckAssurance {
 	pointcut verifyAssurance(): execution(void PetStore.makeAppointment(..));
 	
 	before(): verifyAssurance() {
-		System.out.println("Verifying assurance:");
+		System.out.println("Verifying assurance...");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Name of your pet: ");
 		String name = sc.nextLine();
